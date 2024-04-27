@@ -4,7 +4,7 @@ import cs from "../src/assets/cs.svg"
 import docker from "../src/assets/docker.svg"
 import html from "../src/assets/html5.svg"
 import css3 from "../src/assets/css3.svg"
-import avat from "../src/assets/avat.svg"
+import avatar from "../src/assets/avat.svg"
 import flutter from "../src/assets/flutter.svg"
 import javascript from "../src/assets/javascript.svg"
 import typescript from "../src/assets/typescript.svg"
@@ -51,7 +51,7 @@ function Home(){
                                 in
                                 developing front-end applications and occasionally back end</p>
                         </div>
-                            <img className="w-1/2 col-span-4" src={avat} alt="avatar" />
+                            <img className="w-1/2 col-span-4" src={avatar} alt="avatar" />
                     </div>
                     <div>
                         <header className="text-slate-200 font-bold">About me</header>
@@ -80,7 +80,7 @@ function Home(){
                         </div>
                         <div className="col-span-6 justify-self-start">
                             <header><a href="#">Programmer Analyst/Front end Developer | Sagicor Group</a></header>
-                            <p className="text-slate-400">Build and maintain critical components used to construct Klaviyo’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.</p>
+                            <p className="text-slate-400">Build and maintain critical components used to construct ’s frontend, across the whole product. Work closely with cross-functional teams, including developers, designers, and product managers, to implement and advocate for best practices in web accessibility.</p>
                             <ul className="flex gap-5">
                                 <li>
                                     <p>Angular</p>
