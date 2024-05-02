@@ -1,28 +1,35 @@
 import hamburger from "../src/assets/hamburger.svg";
 import allImages from "./model/model.ts";
-import  { useState} from "react";
+import {useState, useRef, useEffect} from "react";
 import Modal from "./components/modal.tsx";
 
 function Home(){
 
     const [modalOpen, setModalOpen] = useState(false);
+    const modalRef = useRef(null);
 
+    // useEffect(() => {
+    //     document.addEventListener('mousedown',closeModal)
+    // })
+
+    // function closeModal(){
+    //     setModalOpen(false);
+    // }
 
     const textAreaRows:number = 6;
 
     function openModal(){
-        console.log(modalOpen);
         setModalOpen(!modalOpen);
     }
 
 
     return (
         <div className="flex bg-slate-900 flex-col" >
-            {modalOpen ? <Modal home="Home"  job={"Experience"} contact={"contact"} tech={"tech"} handleClose={openModal} />: undefined}
+            {modalOpen ? <div ref={modalRef}><Modal home="Home" job={"Experience"} contact={"contact"} tech={"tech"} handleClose={openModal} /></div> : undefined}
             <nav className=" space-y-5 p-6 lg:fixed lg:w-full">
                 <ul className="flex justify-between">
                     <li>
-                        <header className="text-slate-200 text-2xl">
+                        <header className="text-slate-200 font-bold text-2xl">
                             Mikarlo Francis
                         </header>
                     </li>
@@ -62,20 +69,10 @@ function Home(){
                 <section id="techStack" className="flex flex-col space-y-5 mb-16 p-5">
                     <h1 className="text-4xl font-bold text-slate-200">Tech Stack</h1>
                     <div className="grid w-[22rem] gap-3 justify-between grid-cols-4 transition ease-in">
-                    {/*<img src={angular} className="transition-opacity ease-in duration-700 " alt="Angular Stack"/>*/}
-                    {/*    <img src={typescript} alt="Typescript"/>*/}
-                    {/*    <img src={html} alt="html 5"/>*/}
-                    {/*    <img src={css3} alt="CSS3"/>*/}
-                    {/*    <img src={javascript} alt="Javascript"/>*/}
-                    {/*    <img src={docker} alt="Docker"/>*/}
-                    {/*    <img src={react} alt="React"/>*/}
-                    {/*    <img src={bitbucket} alt="Bitbucket"/>*/}
-                    {/*    <img src={cs} alt="C#"/>*/}
-                    {/*    <img src={flutter} alt="Flutter"/>*/}
-                        <ul className="grid grid-cols-4 md:grid-cols-8 lg:grid-cols-12 lg:w-[96rem] mt-8 md:w-[48rem] gap-3 w-[22rem] ">
+                        <ul className="grid grid-cols-3 md:grid-cols-8 lg:grid-cols-12 lg:w-[96rem] mt-8 md:w-[48rem] gap-3 w-[21rem] ">
                             {
                                 allImages.map((image, i) => (
-                                    <li className="animate-bounce" key={i}> <img  src={image} alt={image.slice(12)}/> </li>
+                                    <li  key={i}> <img  src={image} alt={image.slice(12)}/> </li>
                                 ))
                             }
                         </ul>

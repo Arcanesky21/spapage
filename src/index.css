@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 *{
-    font-family: Inter, ui-serif;
+    font-family: Inter, sans-serif;
 }
