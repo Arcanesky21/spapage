@@ -1,6 +1,6 @@
 import hamburger from "../src/assets/hamburger.svg";
 import allImages from "./model/model.ts";
-import {useState, useRef, useEffect} from "react";
+import {useState, useRef} from "react";
 import Modal from "./components/modal.tsx";
 
 function Home(){
